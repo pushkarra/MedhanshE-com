@@ -852,31 +852,31 @@ const carouselData = [
     id: 1,
     title: 'COB',
     price: '7 W',
-    image: 'pics/201.jpeg',
+    image: 'pics/4_1.png',
   },
   {
     id: 2,
     title: 'COB CYLINDER',
     price: '12 W',
-    image: 'pics/202.jpeg',
+    image: 'pics/5_1.png',
   },
   {
     id: 3,
     title: 'COB LIGHT',
     price: '12W',
-    image: 'pics/203.jpeg',
+    image: 'pics/6_1.png',
   },
   {
     id: 4,
     title: 'LIGHT COB',
     price: '7 W',
-    image: 'pics/204.jpeg',
+    image: 'pics/3_1.png',
   },
   {
     id: 5,
     title: 'PANEL DRIVER',
     price: '4 INCH',
-    image: 'pics/8_c.jpg',
+    image: 'pics/8_1.png',
   },
 ];
 

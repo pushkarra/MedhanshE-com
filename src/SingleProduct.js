@@ -125,10 +125,10 @@ const SingleProduct = () => {
           <p><b>Category: </b> {category} </p><br></br>
           <p><b>Subcategory: </b> {subcategory} </p><br></br>
           {/* <img src={image} alt={name} /> */}
-          <p><b>Color: </b> {colortemp.join(", ")} </p><br></br>
-          <p><b>Power: </b> {power.join(", ")}</p><br></br>
-          <p><b> Dimension: </b> {dimension.join(", ")}</p><br></br>
-          <p><b>Size: </b> {size.join(", ")}</p><br></br>
+          <p><b>Color: </b> {colortemp} </p><br></br>
+          <p><b>Power: </b> {power}</p><br></br>
+          <p><b> Dimension: </b> {dimension}</p><br></br>
+          <p><b>Size: </b> {size}</p><br></br>
           <p><b>Shape: </b> {typeo}</p>
           
           <ColorSection>

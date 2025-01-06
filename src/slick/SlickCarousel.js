@@ -61,27 +61,27 @@ import "./Carousel.css";
 const Carousel = () => {
   const images = [
     {
-      src: "pics/196.jpg",
+      src: "pics/16_1.png",
       title: "Rimless Surface Panel",
       link: "/products"
     },
     {
-      src: "pics/195.jpg",
+      src: "pics/17_1.png",
       title: "Smart 120+120 LED",
       link: "/products"
     },
     {
-      src: "pics/197.jpg",
+      src: "pics/1_1.png",
       title: "Led Panel Light",
       link: "/products"
     },
     {
-      src: "pics/194.jpg",
+      src: "pics/5_1.png",
       title: "130 LED Sensor",
       link: "/products"
     },
     {
-      src: "pics/193.jpeg",
+      src: "pics/6_1.png",
       title: "Motion Sensor",
       link: "/products"
     },

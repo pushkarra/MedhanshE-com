@@ -1,18 +1,18 @@
 export const SliderData = [
     {
         image:
-          'pics/125.jpg'
+          'pics/11_1.png'
       },
       {
         image:
-          'pics/122.png'
+          'pics/12_1.png'
       },
       {
         image:
-          'pics/126.png'
+          'pics/13_1.png'
       },
       {
         image:
-          'pics/123.png'
+          'pics/14_1.png'
       }
   ];

@@ -7,31 +7,31 @@ const carouselData = [
     id: 1,
     title: 'TRI-COLOR DRIVER',
     price: '$4,800',
-    image: 'pics/122.png',
+    image: 'pics/1_1.png',
   },
   {
     id: 2,
     title: '4 INCH PANEL',
     price: '$3,900',
-    image: 'pics/123.png',
+    image: 'pics/1_2.png',
   },
   {
     id: 3,
     title: 'LED DOWNLIGHT',
     price: '$4,500',
-    image: 'pics/125.jpg',
+    image: 'pics/1_3.png',
   },
   {
     id: 4,
     title: 'SMART DRIVER',
     price: '$3,500',
-    image: 'pics/199.jpeg',
+    image: 'pics/5_1.png',
   },
   {
     id: 5,
     title: '50W BULB',
     price: '$2,200',
-    image: 'pics/126.png',
+    image: 'pics/6_1.png',
   },
 ];
 
