@@ -5,7 +5,7 @@ import reducer from "../reducer/productReducer";
 const AppContext = createContext();
 
 // const API = "https://productdataapi-production.up.railway.app/api/products";
-const API = "https://finalapi.vercel.app/api/products";
+const API = "https://medhansh-api.vercel.app/api/products";
 
 const initialState = {
   isLoading: false,

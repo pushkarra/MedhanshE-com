@@ -10,7 +10,7 @@ import { TbTruckDelivery, TbReplace, TbUsersGroup } from "react-icons/tb";
 
 
 // const API = "https://productdataapi-production.up.railway.app/api/products";
-const API = "https://finalapi.vercel.app/api/products";
+const API = "https://medhansh-api.vercel.app/api/products";
 
 const colorfulSquareColors = ["#2B03E0", "#FF1900", "#198E01", "#FFC61C"];
 
@@ -92,6 +92,7 @@ const SingleProduct = () => {
     size,
     colors,
     features,
+    colortemp,
     dimension,
     lengthy,
     color,
@@ -106,7 +107,7 @@ const SingleProduct = () => {
 
   const displayFields = (ide) => {
     // Check the value of ide and conditionally render fields
-    if (ide >= "firstelectronicsa" && ide <= "firstelectronicsg") {
+    
 
       const bulletList = features.map((feature, index) => (
         <li key={index}>{feature}</li>
@@ -124,8 +125,9 @@ const SingleProduct = () => {
           <p><b>Category: </b> {category} </p><br></br>
           <p><b>Subcategory: </b> {subcategory} </p><br></br>
           {/* <img src={image} alt={name} /> */}
+          <p><b>Color: </b> {colortemp.join(", ")} </p><br></br>
           <p><b>Power: </b> {power.join(", ")}</p><br></br>
-          <p><b> Lumen: </b> {lumen.join(", ")}</p><br></br>
+          <p><b> Dimension: </b> {dimension.join(", ")}</p><br></br>
           <p><b>Size: </b> {size.join(", ")}</p><br></br>
           <p><b>Shape: </b> {typeo}</p>
           
@@ -163,172 +165,7 @@ const SingleProduct = () => {
           
         </div>
       );
-    } else if (ide >= "pacifica" && ide <= "pacificb") {
-      return(
-        <div>
-
-          <h2>{name}</h2> <br></br> <br></br><br></br>
-          <p><b>Category: </b> {category} </p><br></br>
-          <p><b>Subcategory: </b> {subcategory} </p><br></br>
-          <p><b>Power: </b> {source.join(", ")}</p><br></br>
-          <p><b> Length: </b> {lengthy.join(", ")}</p><br></br>
-          <p><b>Color: </b> {color} </p><br></br>
-          <p><b>Type: </b> {typeo} </p><br></br><br></br><br></br><br></br>
-          
-          <div className="product-data">
-           <div className="product-data-warranty">
-              <div className="product-warranty-data">
-                <TbTruckDelivery className="warranty-icon" />
-                <p>Courier Charges: ₹50/Kg   </p>
-              </div>
-
-              <div className="product-warranty-data">
-                <TbReplace className="warranty-icon" />
-                <p>15 Days Replacement   </p>
-              </div>
-
-              <div className="product-warranty-data">
-                <TbUsersGroup className="warranty-icon" />
-                <p>Satisfied Customers   </p>
-              </div>
-
-              <div className="product-warranty-data">
-                <MdSecurity className="warranty-icon" />
-                <p>2 Year Warranty </p>
-              </div>
-           </div>
-
-          </div>
-      </div>
-
-      );
-
-    }
-
-    else if (ide >= "accessa" && ide <= "accessf") {
-      return(
-        <div>
-          <h2>{name}</h2> <br></br> <br></br><br></br>
-          <p><b>Category: </b> {category} </p><br></br>
-          <p><b>Subcategory: </b> {subcategory} </p><br></br>
-          <p><b>Dimension: </b> {dimension} </p><br></br>
-          <p><b>Color </b> {color} </p><br></br>
-
-          <div className="product-data">
-          <div className="product-data-warranty">
-              <div className="product-warranty-data">
-                <TbTruckDelivery className="warranty-icon" />
-                <p>Courier Charges: ₹50/Kg   </p>
-              </div>
-
-              <div className="product-warranty-data">
-                <TbReplace className="warranty-icon" />
-                <p>15 Days Replacement   </p>
-              </div>
-
-              <div className="product-warranty-data">
-                <TbUsersGroup className="warranty-icon" />
-                <p>Satisfied Customers   </p>
-              </div>
-
-              <div className="product-warranty-data">
-                <MdSecurity className="warranty-icon" />
-                <p>2 Year Warranty </p>
-              </div>
-            </div>
-            </div>
-          
-        
-          
-        </div>
-
-      );
-
-    }
-
-    else if (ide >= "lunatica" && ide <= "lunaticw") {
-      return(
-        <div>
-
-          <h2>{name}</h2> <br></br> <br></br><br></br>
-          <p><b>Category: </b> {category} </p><br></br>
-          <p><b>Subcategory: </b> {subcategory} </p><br></br>
-          <p><b>AC Voltage: </b> {voltage1} </p><br></br>
-          <p><b>Output Voltage: </b> {voltage2} </p><br></br>
-          <p><b>Output Current: </b> {current} </p><br></br>
-          <p><b>PF: </b> {pf} </p><br></br>
-          <p><b>Surge: </b> {surge} </p><br></br>
-          <p><b>Type: </b> {typeo} </p><br></br><br></br><br></br><br></br>
-          
-          <div className="product-data">
-          <div className="product-data-warranty">
-              <div className="product-warranty-data">
-                <TbTruckDelivery className="warranty-icon" />
-                <p>Courier Charges: ₹50/Kg   </p>
-              </div>
-
-              <div className="product-warranty-data">
-                <TbReplace className="warranty-icon" />
-                <p>15 Days Replacement   </p>
-              </div>
-
-              <div className="product-warranty-data">
-                <TbUsersGroup className="warranty-icon" />
-                <p>Satisfied Customers   </p>
-              </div>
-
-              <div className="product-warranty-data">
-                <MdSecurity className="warranty-icon" />
-                <p>2 Year Warranty </p>
-              </div>
-            </div>
-            </div>
-          
-        </div>
-
-      );
-
-    }
     
-    
-    
-    
-    else {
-      return (
-        <div>
-          <h2>{name}</h2> <br></br> <br></br><br></br>
-          <p><b>Category: </b> {category} </p><br></br>
-          <p><b>Subcategory: </b> {subcategory} </p><br></br>
-          <p><b>Dimension: </b> {dimension} </p><br></br>
-          <p><b>Color: </b> {color} </p><br></br>
-          <p><b>Type: </b> {typeo} </p><br></br><br></br><br></br><br></br>
-          
-          <div className="product-data">
-          <div className="product-data-warranty">
-              <div className="product-warranty-data">
-                <TbTruckDelivery className="warranty-icon" />
-                <p>Courier Charges: ₹50/Kg   </p>
-              </div>
-
-              <div className="product-warranty-data">
-                <TbReplace className="warranty-icon" />
-                <p>15 Days Replacement   </p>
-              </div>
-
-              <div className="product-warranty-data">
-                <TbUsersGroup className="warranty-icon" />
-                <p>Satisfied Customers   </p>
-              </div>
-
-              <div className="product-warranty-data">
-                <MdSecurity className="warranty-icon" />
-                <p>2 Year Warranty </p>
-              </div>
-            </div>
-            </div>
-        </div>
-      );
-    }
   };
 
   return (
