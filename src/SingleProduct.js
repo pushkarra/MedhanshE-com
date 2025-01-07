@@ -49,6 +49,7 @@ const ProductImage = styled.img`
   max-height: 500px;
   margin-bottom: 20px;
   border-radius: 10px;
+  filter: brightness(.98);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   object-fit: contain;
 
@@ -66,11 +67,8 @@ const ProductDetails = styled.div`
   flex-direction: column;
   justify-content: center;
   color: #4a148c;
-  padding: 20px;
-  background: linear-gradient(to right, #ffffff, #f9f3ff);
-  border-radius: 10px;
-  box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.1);
-
+  padding: 10px;
+  
   @media (max-width: 1000px) {
     padding: 15px;
   }

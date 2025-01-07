@@ -75,7 +75,7 @@ const Header = () => {
     <MainHeader>
       <div className="radi">
         <NavLink to="/">
-          <img src="./images/medhansh-logo.png" alt="my logo img" />
+          <img src={`${process.env.PUBLIC_URL}/images/medhansh-logo.png`} alt="my logo img" />
         </NavLink>
       </div>
       <Nav />
