@@ -162,7 +162,7 @@ const MainHeader = styled.header`
   @media screen and (max-width: 786px) {
     padding: 1rem 2rem;
     height: 7rem;
-    background: rgba(68, 23, 82, 0.98);
+    background: #FFE1FF;
 
     .radi {
       border-radius: 10px;

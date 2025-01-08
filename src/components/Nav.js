@@ -339,7 +339,7 @@ const Nav = () => {
 
         .mobile-nav-icon {
           font-size: 4.2rem;
-          color: #441752;
+          color:rgb(8, 2, 2);
           transition: all 0.3s ease;
         }
       }
@@ -395,7 +395,7 @@ const Nav = () => {
           &:visited {
             padding: 1.5rem 3rem;
             margin: 1rem 0;
-            background: rgba(68, 23, 82, 0.05);
+            
           }
 
           &:hover,
