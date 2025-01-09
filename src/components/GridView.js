@@ -291,8 +291,8 @@ const Wrapper = styled.section`
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 4rem;
-      height: 4rem;
+      width: 5.5rem;
+      height: 5.5rem;
       border: none;
       background: white;
       color: #6a1b9a;
@@ -317,13 +317,13 @@ const Wrapper = styled.section`
     }
 
     .page-number {
-      min-width: 4rem;
-      height: 4rem;
+      min-width: 5.5rem;
+      height: 5.5rem;
       padding: 0 0.5rem;
       border: none;
       background: white;
       color: #6a1b9a;
-      font-size: 1.4rem;
+      font-size: 1.8rem;
       font-weight: 500;
       border-radius: 12px;
       cursor: pointer;
@@ -358,9 +358,9 @@ const Wrapper = styled.section`
     @media (max-width: 768px) {
       .nav-button,
       .page-number {
-        width: 3.5rem;
-        height: 3.5rem;
-        font-size: 1.2rem;
+        width: 5rem;
+        height: 5rem;
+        font-size: 1.6rem;
       }
 
       .page-numbers {
@@ -373,9 +373,9 @@ const Wrapper = styled.section`
       
       .nav-button,
       .page-number {
-        width: 3rem;
-        height: 3rem;
-        font-size: 1.1rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        font-size: 1.4rem;
       }
 
       .page-numbers {

@@ -18,20 +18,136 @@ const bounceAnimation = keyframes`
   }
 `;
 
+const LoadingSpinner = styled.div`
+  --uib-size: 2.8rem;
+  --uib-speed: 0.9s;
+  --uib-color: #183153;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--uib-size);
+  width: var(--uib-size);
+
+  & > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+  }
+
+  & > div::before {
+    content: '';
+    height: 20%;
+    width: 20%;
+    border-radius: 50%;
+    background-color: var(--uib-color);
+    transform: scale(0);
+    opacity: 0.5;
+    animation: pulse0112 calc(var(--uib-speed) * 1.111) ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(18, 31, 53, 0.3);
+  }
+
+  & > div:nth-child(2) {
+    transform: rotate(45deg);
+  }
+
+  & > div:nth-child(2)::before {
+    animation-delay: calc(var(--uib-speed) * -0.875);
+  }
+
+  & > div:nth-child(3) {
+    transform: rotate(90deg);
+  }
+
+  & > div:nth-child(3)::before {
+    animation-delay: calc(var(--uib-speed) * -0.75);
+  }
+
+  & > div:nth-child(4) {
+    transform: rotate(135deg);
+  }
+
+  & > div:nth-child(4)::before {
+    animation-delay: calc(var(--uib-speed) * -0.625);
+  }
+
+  & > div:nth-child(5) {
+    transform: rotate(180deg);
+  }
+
+  & > div:nth-child(5)::before {
+    animation-delay: calc(var(--uib-speed) * -0.5);
+  }
+
+  & > div:nth-child(6) {
+    transform: rotate(225deg);
+  }
+
+  & > div:nth-child(6)::before {
+    animation-delay: calc(var(--uib-speed) * -0.375);
+  }
+
+  & > div:nth-child(7) {
+    transform: rotate(270deg);
+  }
+
+  & > div:nth-child(7)::before {
+    animation-delay: calc(var(--uib-speed) * -0.25);
+  }
+
+  & > div:nth-child(8) {
+    transform: rotate(315deg);
+  }
+
+  & > div:nth-child(8)::before {
+    animation-delay: calc(var(--uib-speed) * -0.125);
+  }
+
+  @keyframes pulse0112 {
+    0%,
+    100% {
+      transform: scale(0);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+`;
+
 
 const FeatureProduct = () => {
   const { isLoading, featureProducts } = useProductContext();
 
   if (isLoading) {
-    // return <div > ......Loading </div>;
+    // // return <div > ......Loading </div>;
+    // return (
+    //   <LoadingContainer>
+    //     <LoadingText>Loading...</LoadingText>
+    //     <BouncingSquaresContainer>
+    //       {colorfulSquareColors.map((color, index) => (
+    //         <BouncingSquare key={index} color={color} />
+    //       ))}
+    //     </BouncingSquaresContainer>
+    //   </LoadingContainer>
     return (
       <LoadingContainer>
-        <LoadingText>Loading...</LoadingText>
-        <BouncingSquaresContainer>
-          {colorfulSquareColors.map((color, index) => (
-            <BouncingSquare key={index} color={color} />
-          ))}
-        </BouncingSquaresContainer>
+        <LoadingSpinner>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </LoadingSpinner>
       </LoadingContainer>
     );
   }
@@ -61,25 +177,25 @@ const LoadingContainer = styled.div`
   height: 100px;
 `;
 
-const LoadingText = styled.div`
-  font-size: 24px;
-  margin-bottom: 19px;
-  color: #333;
-`;
+// const LoadingText = styled.div`
+//   font-size: 24px;
+//   margin-bottom: 19px;
+//   color: #333;
+// `;
 
-const BouncingSquaresContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+// const BouncingSquaresContainer = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// `;
 
-const BouncingSquare = styled.div`
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-  background-color: ${(props) => props.color};
-  animation: ${bounceAnimation} 1s infinite;
-`;
+// const BouncingSquare = styled.div`
+//   width: 20px;
+//   height: 20px;
+//   margin: 0 5px;
+//   background-color: ${(props) => props.color};
+//   animation: ${bounceAnimation} 1s infinite;
+// `;
 
 const Wrapper = styled.section`
   padding: 4rem 0;
