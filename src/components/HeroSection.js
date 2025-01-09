@@ -89,7 +89,7 @@ const Pattern = styled.div`
 
 const Wrapper = styled.section`
   background: linear-gradient(135deg, #f5f3ff 0%, #f3e8ff 100%);
-  min-height: 90vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   position: relative;
