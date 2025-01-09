@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import Footer from "./components/Footer";
 
 const API = "https://medhansh-api.vercel.app/api/products";
 
@@ -307,7 +306,6 @@ const SingleProduct = () => {
   if (error) return <PageContainer>Error: {error}</PageContainer>;
 
   return (
-    <>
     <PageContainer>
       {product ? (
         <ProductCard>
@@ -363,10 +361,6 @@ const SingleProduct = () => {
       )}
       
     </PageContainer>
-    
-        <Footer />
-    
-    </>
   );
 };
 
