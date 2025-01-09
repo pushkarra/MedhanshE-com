@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import FilterSection from "./components/FilterSection";
 import ProductList from "./components/ProductList";
-import Sort from "./components/Sort";
 import { useEffect } from 'react';
 // import { useFilterContext } from "./context/filter_context";
 
@@ -12,31 +10,18 @@ const Products = () => {
   }, []);
   return (
     <Wrapper>
-      <div className="container grid grid-filter-column">
-        <div>
-          <FilterSection />
-        </div>
-
-        <section className="product-view--sort">
-          <div className="sort-filter">
-            <Sort />
-          </div>
-          <div className="main-product">
-            <ProductList />
-          </div>
-        </section>
-      </div>
+        <ProductList />
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
 
-background-color:  #FFFFF0 ;
+background: linear-gradient(135deg, #F5F3FF 0%, #F3E8FF 100%);
 
 
   .grid-filter-column {
-    grid-template-columns: 0.3fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   @media (max-width: ${({ theme }) => theme.media.mobile}) {

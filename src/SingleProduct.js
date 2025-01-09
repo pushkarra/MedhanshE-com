@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import Footer from "./components/Footer";
 
 const API = "https://medhansh-api.vercel.app/api/products";
 
@@ -271,17 +272,13 @@ const SingleProduct = () => {
     const fetchProduct = async () => {
       setLoading(true);
       try {
-        const response = await fetch(API);
+        const response = await fetch(`${API}/${ide}`);
+        console.log(response);
         if (!response.ok) {
           throw new Error("Failed to fetch product data");
         }
         const data = await response.json();
-        const selectedProduct = data.find((item) => item.id === ide);
-        if (selectedProduct) {
-          setProduct(selectedProduct);
-        } else {
-          setError("Product not found");
-        }
+        setProduct(data);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -310,6 +307,7 @@ const SingleProduct = () => {
   if (error) return <PageContainer>Error: {error}</PageContainer>;
 
   return (
+    <>
     <PageContainer>
       {product ? (
         <ProductCard>
@@ -363,11 +361,385 @@ const SingleProduct = () => {
       ) : (
         <PageContainer>No product data available</PageContainer>
       )}
+      
     </PageContainer>
+    
+        <Footer />
+    
+    </>
   );
 };
 
 export default SingleProduct;
+
+
+
+// import React, { useEffect, useState } from "react";
+// import { useParams } from "react-router-dom";
+// import styled from "styled-components";
+
+// const API = "https://medhansh-api.vercel.app/api/products";
+
+// const PageContainer = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 40px;
+//   min-height: 100vh;
+//   background: linear-gradient(to bottom right, #9a7bc2, #e7d5fa);
+//   color: #4a148c;
+//   font-family: Arial, sans-serif;
+//   @media (max-width: 1000px) {
+//     padding: 30px;
+//   }
+// `;
+
+// const ProductCard = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   width: 90%; /* Increased width for larger visual impact */
+//   max-width: 1200px; /* Maximum width for large screens */
+//   gap: 100px; 
+//   background: rgba(255, 255, 255, 0.9);
+//   border-radius: 15px;
+//   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+//   padding: 30px;
+//   overflow: hidden;
+
+  
+//   @media (min-width: 768px) {
+//     flex-direction: row;
+//     padding: 40px;
+//   }
+
+//   @media (max-width: 1000px) {
+//     padding: 20px;
+//     gap: 15px;
+//   }
+// `;
+
+// const ProductImage = styled.img`
+//   width: 100%;
+//   max-width: 500px; /* Larger image for better visibility */
+//   height: 100%;
+//   max-height: 500px;
+//   margin-bottom: 20px;
+//   border-radius: 10px;
+//   filter: brightness(.98);
+//   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+//   object-fit: contain;
+
+//   @media (max-width: 1000px) {
+//     max-width: 400px;
+//   }
+
+//   @media (max-width: 768px) {
+//     max-width: 300px;
+//   }
+// `;
+
+// const ProductDetails = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   color: #4a148c;
+//   padding: 10px;
+  
+//   @media (max-width: 1000px) {
+//     padding: 15px;
+//   }
+
+//   @media (max-width: 768px) {
+//     padding: 10px;
+//   }
+// `;
+
+// const ProductTitle = styled.h1`
+//   font-size: 28px; /* Default for large screens */
+//   margin-bottom: 20px;
+//   color: #4a148c;
+//   font-weight: bold;
+//   text-transform: uppercase;
+//   letter-spacing: 1.5px;
+//   border-bottom: 2px solid #ab47bc;
+//   padding-bottom: 10px;
+//   text-align: center; /* Aligns text neatly */
+
+//   /* Word wrapping to prevent overflow */
+//   word-wrap: break-word;
+//   overflow-wrap: break-word;
+
+//   /* Responsive font size adjustments */
+//   @media (max-width: 930px) {
+//     font-size: 22px; /* Smaller font for medium screens */
+//     margin-bottom: 15px;
+//   }
+
+//   @media (max-width: 568px) {
+//     font-size: 18px; /* Smallest font for extra small screens */
+//     margin-bottom: 10px;
+//   }
+// `;
+
+// const Divider = styled.hr`
+//   border: none;
+//   border-top: 1px solid #d3c4f2;
+//   margin: 15px 0;
+// `;
+
+
+// const ProductText = styled.p`
+//   font-size: 16px;
+//   margin: 10px 0;
+//   color: #4a148c;
+//   line-height: 1.5;
+//   font-weight: 500;
+//   display: flex;
+//   align-items: center;
+//   flex-wrap: wrap; /* Ensures text wraps properly */
+//   white-space: normal; /* Prevents text from overflowing without wrapping */
+
+//   &::before {
+//     content: "•";
+//     margin-right: 10px;
+//     font-size: 18px;
+//     color: #ab47bc;
+//     font-weight: bold;
+//   }
+
+//   @media (max-width: 930px) {
+//     font-size: 14px;
+//     margin: 8px 0;
+//   }
+
+//   @media (max-width: 568px) {
+//     font-size: 12px;
+//     margin: 5px 0;
+//   }
+// `;
+
+// const HighlightedText = styled.span`
+//   color: #ab47bc;
+//   font-weight: bold;
+//   font-style: italic;
+//   text-shadow: 1px 1px 5px rgba(171, 71, 188, 0.4);
+//   white-space: normal; /* Ensures inline highlighted text wraps properly */
+
+//   @media (max-width: 930px) {
+//     font-size: 16px;
+//   }
+
+//   @media (max-width: 568px) {
+//     font-size: 14px;
+//   }
+// `;
+
+// const LoadingSpinner = styled.div`
+//   --uib-size: 2.8rem;
+//   --uib-speed: 0.9s;
+//   --uib-color: #183153;
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: var(--uib-size);
+//   width: var(--uib-size);
+
+//   & > div {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-start;
+//     height: 100%;
+//     width: 100%;
+//   }
+
+//   & > div::before {
+//     content: '';
+//     height: 20%;
+//     width: 20%;
+//     border-radius: 50%;
+//     background-color: var(--uib-color);
+//     transform: scale(0);
+//     opacity: 0.5;
+//     animation: pulse0112 calc(var(--uib-speed) * 1.111) ease-in-out infinite;
+//     box-shadow: 0 0 20px rgba(18, 31, 53, 0.3);
+//   }
+
+//   & > div:nth-child(2) {
+//     transform: rotate(45deg);
+//   }
+
+//   & > div:nth-child(2)::before {
+//     animation-delay: calc(var(--uib-speed) * -0.875);
+//   }
+
+//   & > div:nth-child(3) {
+//     transform: rotate(90deg);
+//   }
+
+//   & > div:nth-child(3)::before {
+//     animation-delay: calc(var(--uib-speed) * -0.75);
+//   }
+
+//   & > div:nth-child(4) {
+//     transform: rotate(135deg);
+//   }
+
+//   & > div:nth-child(4)::before {
+//     animation-delay: calc(var(--uib-speed) * -0.625);
+//   }
+
+//   & > div:nth-child(5) {
+//     transform: rotate(180deg);
+//   }
+
+//   & > div:nth-child(5)::before {
+//     animation-delay: calc(var(--uib-speed) * -0.5);
+//   }
+
+//   & > div:nth-child(6) {
+//     transform: rotate(225deg);
+//   }
+
+//   & > div:nth-child(6)::before {
+//     animation-delay: calc(var(--uib-speed) * -0.375);
+//   }
+
+//   & > div:nth-child(7) {
+//     transform: rotate(270deg);
+//   }
+
+//   & > div:nth-child(7)::before {
+//     animation-delay: calc(var(--uib-speed) * -0.25);
+//   }
+
+//   & > div:nth-child(8) {
+//     transform: rotate(315deg);
+//   }
+
+//   & > div:nth-child(8)::before {
+//     animation-delay: calc(var(--uib-speed) * -0.125);
+//   }
+
+//   @keyframes pulse0112 {
+//     0%,
+//     100% {
+//       transform: scale(0);
+//       opacity: 0.5;
+//     }
+//     50% {
+//       transform: scale(1);
+//       opacity: 1;
+//     }
+//   }
+// `;
+
+// const SingleProduct = () => {
+//   const { ide } = useParams(); // Extracting product ID from route params
+//   const [product, setProduct] = useState(null);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(null);
+
+//   useEffect(() => {
+//     const fetchProduct = async () => {
+//       setLoading(true);
+//       try {
+//         const response = await fetch(`${API}/${ide}`);
+//         console.log(response);
+//         if (!response.ok) {
+//           throw new Error("Failed to fetch product data");
+//         }
+//         const data = await response.json();
+//         setProduct(data);
+//       } catch (err) {
+//         setError(err.message);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+
+//     fetchProduct();
+//   }, [ide]);
+
+//   if (loading)
+//     return (
+//       <PageContainer>
+//         <LoadingSpinner>
+//           <div></div>
+//           <div></div>
+//           <div></div>
+//           <div></div>
+//           <div></div>
+//           <div></div>
+//           <div></div>
+//           <div></div>
+//         </LoadingSpinner>
+//       </PageContainer>
+//     );
+//   if (error) return <PageContainer>Error: {error}</PageContainer>;
+
+//   return (
+//     <PageContainer>
+//       {product ? (
+//         <ProductCard>
+//           <ProductImage src={product.imageie} alt={product.name} />
+//           <ProductDetails>
+//             <ProductTitle>{product.name}</ProductTitle>
+//             <Divider />
+//             {product.category && (
+//               <ProductText>
+//                 Category: <HighlightedText>{product.category}</HighlightedText>
+//               </ProductText>
+//             )}
+//             {product.subcategory && (
+//               <ProductText>
+//                 Subcategory: <HighlightedText>{product.subcategory}</HighlightedText>
+//               </ProductText>
+//             )}
+//             {product.typeo && (
+//               <ProductText>
+//                 Type: <HighlightedText>{product.typeo}</HighlightedText>
+//               </ProductText>
+//             )}
+//             {product.power.length > 0 && (
+//               <ProductText>
+//                 Power: <HighlightedText>{product.power.join(", ")}</HighlightedText>
+//               </ProductText>
+//             )}
+//             {product.colortemp.length > 0 && (
+//               <ProductText>
+//                 Color Temperature:{" "}
+//                 <HighlightedText>{product.colortemp.join(", ")}</HighlightedText>
+//               </ProductText>
+//             )}
+//             {product.size.length > 0 && (
+//               <ProductText>
+//                 Sizes: <HighlightedText>{product.size.join(", ")}</HighlightedText>
+//               </ProductText>
+//             )}
+//             {product.colors.length > 0 && (
+//               <ProductText>
+//                 Colors: <HighlightedText>{product.colors.join(", ")}</HighlightedText>
+//               </ProductText>
+//             )}
+//             {product.dimension && (
+//               <ProductText>
+//                 Dimension: <HighlightedText>{product.dimension}</HighlightedText>
+//               </ProductText>
+//             )}
+//           </ProductDetails>
+//         </ProductCard>
+//       ) : (
+//         <PageContainer>No product data available</PageContainer>
+//       )}
+//     </PageContainer>
+//   );
+// };
+
+// export default SingleProduct;
 
 
 

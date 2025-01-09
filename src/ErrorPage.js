@@ -25,6 +25,8 @@ const ErrorPage = () => {
 };
 
 const Wrapper = styled.section`
+  background: linear-gradient(135deg, #F5F3FF 0%, #F3E8FF 100%);
+  color: #4a148c;
   .container {
     padding: 9rem 0;
     text-align: center;

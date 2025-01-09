@@ -18,27 +18,29 @@ html {
   overflow-x: hidden;
 }
 
-body {
-  overflow-x: hidden;
-   scrollbar-color: rgb(98 84 243);
+/* Global Scrollbar Styles */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f3e8ff;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #6b46c1;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9333ea;
+  }
+
+  /* Firefox Scrollbar Styles */
+  html {
+    scrollbar-color:  #9333ea #f3e8ff;
     scrollbar-width: thin;
-}
-
-body::-webkit-scrollbar {
-  width: 1.5rem;
-}
-
-body::-webkit-scrollbar-track {
-   background-color: rgb(24 24 29);
-}
-
-body::-webkit-scrollbar-thumb {
- 
-  background: #fff;
-    border: 5px solid transparent;
-    border-radius: 9px;
-    background-clip: content-box;
-}
+  }
 
 h1,
 h2,
