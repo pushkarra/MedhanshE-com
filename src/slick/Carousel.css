@@ -1,6 +1,5 @@
   .carousel-wrapper {
     padding: 40px 10px;
-    /* background-color: #f8f9fa; */
     background: linear-gradient(to right, #EDEBEB, #DBD8D8);
   }
   
@@ -21,7 +20,6 @@
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    /* background-color: #007bff; */
   }
   
   .carousel-container {
@@ -35,7 +33,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 350px; */
     overflow: hidden;
     cursor: pointer;
     padding: 10px;

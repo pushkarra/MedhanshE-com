@@ -8,17 +8,28 @@ const ProductReducer = (state, action) => {
         isLoading: true,
       };
 
+      // case "SET_API_DATA":
+      //   // console.log("Payload received:", action.payload);
+      //   const featureData = Array.isArray(action.payload)
+      //     ? action.payload.filter((curElem) => curElem.featured === true)
+      //     : [];
+      //   return {
+      //     ...state,
+      //     isLoading: false,
+      //     products: Array.isArray(action.payload) ? action.payload : [],
+      //     featureProducts: featureData,
+      //   };
+
       case "SET_API_DATA":
-        // console.log("Payload received:", action.payload);
-        const featureData = Array.isArray(action.payload)
-          ? action.payload.filter((curElem) => curElem.featured === true)
-          : [];
-        return {
-          ...state,
-          isLoading: false,
-          products: Array.isArray(action.payload) ? action.payload : [],
-          featureProducts: featureData,
-        };
+  const products = action.payload?.products || []; // Extract products array from payload
+  const featureData = products.filter((curElem) => curElem.featured === true); // Filter featured products
+  return {
+    ...state,
+    isLoading: false,
+    products: products,
+    featureProducts: featureData,
+  };
+
 
     case "API_ERROR":
       return {
