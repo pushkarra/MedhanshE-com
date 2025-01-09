@@ -33,15 +33,15 @@ const HeroSection = () => {
           
           <Stats>
             <StatItem>
-              <span className="number">500+</span>
+              <span className="number">70+</span>
               <span className="label">Products</span>
             </StatItem>
             <StatItem>
-              <span className="number">1000+</span>
+              <span className="number">50+</span>
               <span className="label">Happy Clients</span>
             </StatItem>
             <StatItem>
-              <span className="number">10+</span>
+              <span className="number">3+</span>
               <span className="label">Years Experience</span>
             </StatItem>
           </Stats>
