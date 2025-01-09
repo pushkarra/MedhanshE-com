@@ -66,14 +66,14 @@ const Contact = () => {
     `;
 
     const MapContainer = styled.div`
-        width: 90%;
-        max-width: 1200px;
+        width: 100%;
+        max-width: 1500px;
         margin: 0 auto;
         border-radius: 20px;
         overflow: hidden;
         box-shadow: 0 20px 40px rgba(106, 27, 154, 0.1);
         position: relative;
-        height: 450px;
+        height: 500px;
 
         iframe {
             width: 100%;
@@ -235,10 +235,10 @@ const Contact = () => {
     return (
         <Wrapper>
             <h2 className="common-heading">Let's Connect</h2>
-            <p className="sub-heading">
+            {/* <p className="sub-heading">
                 Have a question or want to work together? We'd love to hear from you.
                 Drop us a message and we'll get back to you as soon as possible.
-            </p>
+            </p> */}
 
             <MapContainer>
                 <iframe

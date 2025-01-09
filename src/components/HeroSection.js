@@ -9,11 +9,11 @@ const HeroSection = () => {
       <Container>
         <ContentBox>
           <CompanyName>
-            <span className="highlight">First</span> Electronics Solutions
+            <span className="highlight">Medhansh</span> Lighting Solutions
           </CompanyName>
           
           <Description>
-            "At First Electronics Solution, we're pioneering innovative lighting technologies that transform spaces and elevate efficiency. Our cutting-edge LED solutions blend sophisticated design with sustainable performance, delivering intelligent lighting solutions for homes, businesses, and industries."
+            "At Medhansh Lighting Solutions, we create lighting that brightens your spaces and simplifies your life. Our LED lights are designed to be energy-efficient, long-lasting, and stylish, making them perfect for homes, offices, and industries. We focus on providing reliable and affordable lighting solutions that work for you."
           </Description>
           
           <ButtonGroup>
