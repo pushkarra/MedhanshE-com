@@ -31,7 +31,7 @@ const HeroSection = () => {
             </ContactButton>
           </ButtonGroup>
           
-          <Stats>
+          {/* <Stats>
             <StatItem>
               <span className="number">70+</span>
               <span className="label">Products</span>
@@ -44,7 +44,7 @@ const HeroSection = () => {
               <span className="number">3+</span>
               <span className="label">Years Experience</span>
             </StatItem>
-          </Stats>
+          </Stats> */}
         </ContentBox>
       </Container>
     </Wrapper>
