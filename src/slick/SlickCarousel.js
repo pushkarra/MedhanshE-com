@@ -7,29 +7,29 @@ import "slick-carousel/slick/slick-theme.css";
 const Carousel = () => {
   const images = [
     {
-      src: "pics/16_1.png",
-      title: "Rimless Surface Panel",
-      link: "/products"
-    },
-    {
-      src: "pics/17_1.png",
-      title: "Smart 120+120 LED",
-      link: "/products"
-    },
-    {
-      src: "pics/1_1.png",
-      title: "Led Panel Light",
-      link: "/products"
-    },
-    {
-      src: "pics/5_1.png",
-      title: "130 LED Sensor",
-      link: "/products"
-    },
-    {
       src: "pics/6_1.png",
-      title: "Motion Sensor",
-      link: "/products"
+      title: "IL-066 Butterfly Led Wall Light",
+      link: "/singleproduct/medhanshlightingi"
+    },
+    {
+      src: "pics/16_1.png",
+      title: "IL-177 TDI LED Gate Light",
+      link: "/singleproduct/gatelight1"
+    },
+    {
+      src: "pics/17_2.png",
+      title: "IL-7788 Quantam Gate Light",
+      link: "/singleproduct/Quantam2"
+    },
+    {
+      src: "pics/k_1.png",
+      title: "IL-1050 Round Gate Light",
+      link: "/singleproduct/worldcup1"
+    },
+    {
+      src: "pics/d_1.png",
+      title: "IL-1063 Gate Light",
+      link: "/singleproduct/twintower1"
     },
   ];
 
@@ -109,7 +109,7 @@ const StyledCarousel = styled.section`
   
   .carousel-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     
     .pre-title {
       display: block;
@@ -157,7 +157,7 @@ const StyledCarousel = styled.section`
     box-shadow: 0 10px 30px rgba(147, 51, 234, 0.08);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     height: 100%;
-    aspect-ratio: 3/4;
+    aspect-ratio: 4/4;
 
     &:hover {
       transform: translateY(-8px);

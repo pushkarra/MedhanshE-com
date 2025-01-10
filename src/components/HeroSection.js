@@ -54,13 +54,19 @@ const HeroSection = () => {
 const Pattern = styled.div`
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(#f5f3ff 2px, transparent 2px),
-    linear-gradient(90deg, #f5f3ff 2px, transparent 2px),
-    linear-gradient(#f5f3ff 1px, transparent 1px),
-    linear-gradient(90deg, #f5f3ff 1px, transparent 1px);
+  background-image: linear-gradient(#e9e4ff 2px, transparent 2px),
+
+    linear-gradient(90deg, #e9e4ff 2px, transparent 2px),
+
+    linear-gradient(#e9e4ff 1px, transparent 1px),
+
+    linear-gradient(90deg, #e9e4ff 1px, transparent 1px);
+
   background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
-  background-color: rgba(147, 51, 234, 0.03);
+
+  background-color: rgba(147, 51, 234, 0.05);
   opacity: 0.3;
   z-index: 1;
   animation: patternMove 15s linear infinite;
@@ -80,15 +86,16 @@ const Pattern = styled.div`
     inset: 0;
     background: radial-gradient(
       circle at 50% 50%,
-      rgba(147, 51, 234, 0.1) 0%,
-      rgba(147, 51, 234, 0.05) 50%,
+      rgba(147, 51, 234, 0.15) 0%,
+
+      rgba(147, 51, 234, 0.08) 50%,
       transparent 100%
     );
   }
 `;
 
 const Wrapper = styled.section`
-  background: linear-gradient(135deg, #f5f3ff 0%, #f3e8ff 100%);
+  background: linear-gradient(135deg, #ede9ff 0%, #e9dcff 100%);
   min-height: 50vh;
   display: flex;
   align-items: center;

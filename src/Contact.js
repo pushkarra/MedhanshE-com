@@ -234,7 +234,8 @@ const Contact = () => {
 
     return (
         <Wrapper>
-            <h2 className="common-heading">Let's Connect</h2>
+            {/* <h2 className="common-heading">Let's Connect</h2> */}
+            <h2 className="common-heading">Connect Us</h2>
             {/* <p className="sub-heading">
                 Have a question or want to work together? We'd love to hear from you.
                 Drop us a message and we'll get back to you as soon as possible.

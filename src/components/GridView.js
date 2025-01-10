@@ -221,10 +221,10 @@ const Wrapper = styled.section`
     position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(147, 51, 234, 0.1);
-    }
+    // &:hover {
+    //   transform: translateY(-5px);
+    //   box-shadow: 0 20px 40px rgba(147, 51, 234, 0.1);
+    // }
 
     .card-data {
       padding: 2rem;
@@ -236,8 +236,8 @@ const Wrapper = styled.section`
       right: 2rem;
       background: rgba(147, 51, 234, 0.9);
       color: white;
-      padding: 0.8rem 1.6rem;
-      border-radius: 3rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0;
       font-size: 1.2rem;
       font-weight: 500;
       z-index: 2;
