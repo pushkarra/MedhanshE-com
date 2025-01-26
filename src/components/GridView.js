@@ -199,8 +199,7 @@ const Wrapper = styled.section`
     background: white;
     padding: 2rem;
     transition: all 0.3s ease;
-    filter: brightness(0.98);
-
+    // filter: brightness(0.7);
     img {
       max-width: 90%;
       margin-top: 1.5rem;
