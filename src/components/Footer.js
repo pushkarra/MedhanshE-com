@@ -762,7 +762,7 @@ const Footer = () => {
             <div className="footer-info">
               <h2>Medhansh Lighting Solutions</h2>
               <p className="address">
-                Near Ramleela Maidan,<br />
+                Maujampur Jaitra,<br />
                 Vill & Post Jaitra<br />
                 Dhampur-246761
               </p>
